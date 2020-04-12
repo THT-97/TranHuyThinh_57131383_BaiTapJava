@@ -28,7 +28,7 @@ public class QuanLyNhanVien implements IQuanLy{
     public void inDS() {
         System.out.println("Ten\t\tTuoi\tLuong\tGio Lam\t\tDia Chi\t\tThuong\n");
         ds.forEach((nv) -> {
-            System.out.println(nv.getThongTin() +"\t" + nv.tinhThuong() +"\n");
+            System.out.println(nv.getThongTin() +"\t" + nv.tinhThuong());
         });
     }
     
