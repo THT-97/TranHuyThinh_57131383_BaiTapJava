@@ -10,6 +10,9 @@ import BaiTap2.QuanLyNhanVien;
 import BaiTap3.SinhVienBiz;
 import BaiTap3.SinhVienIT;
 import BaiTap3.SinhVienPoly;
+import BaiTap4.QuanLyChuyenXe;
+import BaiTap4.XeNgoaiThanh;
+import BaiTap4.XeNoiThanh;
 
 /**
  *
@@ -44,13 +47,31 @@ public class TranHuyThinh_57131383_BaiTapJava {
         
         //Bai3
         System.out.println("\nBAI 3:");
-        SinhVienPoly svIT = new SinhVienIT("Nguyen Van AN", "CNTT", 7.25, 5.5, 6.75);
+        SinhVienPoly svIT = new SinhVienIT("Nguyen Van An", "CNTT", 7.25, 5.5, 6.75);
         SinhVienPoly svBiz = new SinhVienBiz("Le Thi Binh", "QTKD", 6.0, 6.0);
         System.out.println("Ten \t\tLop \tDiem \tHoc luc");
         svIT.xuat();
         System.out.println(svIT.getDiem()+"\t"+svIT.getHocLuc());
         svBiz.xuat();
         System.out.println(svBiz.getDiem()+"\t"+svBiz.getHocLuc());
+        
+        //Bai4
+        XeNoiThanh t1 = new XeNoiThanh("ABC001", "Tran Van An", "79N41", 2, 100.53f, 1500.5);
+        XeNoiThanh t2 = new XeNoiThanh("ABC002", "Le Van Cuong", "79N55", 10, 950.77f, 1000.25);
+        XeNgoaiThanh t3 = new XeNgoaiThanh("HJK001", "Ngo Duc Luong", "79B45", "TP.HN", 5, 2500.5);
+        XeNgoaiThanh t4 = new XeNgoaiThanh("BNM003", "Le Trung Hai", "79N99", "TP.HCM", 3, 1100.75);
+        
+        QuanLyChuyenXe qlcx = new QuanLyChuyenXe();
+        qlcx.them(t1);
+        qlcx.them(t2);
+        qlcx.them(t3);
+        qlcx.them(t4);
+        System.out.println("\nBAI 4:");
+        System.out.println("Chuyen xe\tMa so\tTai xe\t\tTuyen/Diem den\tKm/So ngay di\tDoanh thu");
+        qlcx.inTT();
+        System.out.println("\nTong doanh thu noi thanh: " + qlcx.tinhDoanhThuNoiThanh());
+        System.out.println("Tong doanh thu ngoai thanh: " + qlcx.tinhDoanhThuNgoaiThanh());
+        System.out.println("Tong doanh thu: " + qlcx.tongDoanhThu());
     }
     
 }
