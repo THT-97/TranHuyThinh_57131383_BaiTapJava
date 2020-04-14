@@ -75,6 +75,6 @@ public class NhanVien {
     public Double tinhThuong(){
         if(tongGioLam>=200) return luong*20/100;
         else if(tongGioLam>=100) return luong*10/100;
-        else return 0d;
+        else return 0.0;
     }
 }
